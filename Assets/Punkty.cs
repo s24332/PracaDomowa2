@@ -11,7 +11,7 @@ public class Punkty : MonoBehaviour
     void Start()
     {
         ScoreNum = 0;
-        MyScoreText.text = " Punkty :  " + ScoreNum;
+        MyScoreText.text = "Punkty :  " + ScoreNum;
     }
 
     private void OnTriggerEnter2D(Collider2D Coin)
@@ -20,7 +20,7 @@ public class Punkty : MonoBehaviour
         {
             ScoreNum += 1;
             Destroy(Coin.gameObject);
-            MyScoreText.text = " Punkty :  " + ScoreNum;
+            MyScoreText.text = "Punkty :  " + ScoreNum;
         }
     }
 
