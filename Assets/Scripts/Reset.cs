@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Reset : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void ResetTheGame ()
     {
-        SceneManager.LoadScene("SampleScene");
-    }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        print("The button is working.");
+    }   
 }

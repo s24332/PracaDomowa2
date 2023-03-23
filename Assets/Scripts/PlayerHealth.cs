@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -22,6 +24,11 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(20);
         }
+
+        if (currentHealth == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     void TakeDamage(int damage)
@@ -31,4 +38,15 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if  (GameObject.FindWithTag("Trap"));
+        {
+            TakeDamage(20);
+        }          
+        
+    }
+
 }
