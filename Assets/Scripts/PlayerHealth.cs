@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if  (GameObject.FindWithTag("Trap"));
+        if  (collision.CompareTag("Trap"))
         {
             TakeDamage(20);
         }          
